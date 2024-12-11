@@ -1,0 +1,26 @@
+{% extends "base.html" %}
+
+{% block contents %}
+    <h1>Add New Records</h1>
+    <form method='POST'>
+        {% csrf_token %}
+        
+        <div class="form-group">
+            <label for="{{form.modes.id_for_label}}">{{form.modes.label}}</label>
+            <input type="text" class="form-control" name="{{form.modes.name}}" maxlength="{{form.modes.max}}" required id="{{form.modes.id_for_label}}">
+        </div>
+        <div class="form-group">
+            <label for="{{form.categories.id_for_label}}">{{form.categories.label}}</label>
+            <input type="text" class="form-control" name="{{form.categories.name}}" maxlength="{{form.categories.max}}" required id="{{form.categories.id_for_label}}">
+        </div>
+        <div class="form-group">
+            <label for="{{form.subcategories.id_for_label}}">{{form.subcategories.label}}</label>
+            <input type="text" class="form-control" name="{{form.subcategories.name}}" maxlength="{{form.subcategories.max}}" id="{{form.subcategories.id_for_label}}">
+        </div>
+        <div class="form-group">
+            <label for="{{form.amounts.id_for_label}}">{{form.amounts.label}}</label>
+            <input type="text" class="form-control" name="{{form.amounts.name}}" maxlength="{{form.amounts.max}}" required id="{{form.amounts.id_for_label}}">
+        </div>
+        <button class='btn btn-primary mt-2'type='Submit'>Submit New Song</button>
+    </form>
+{% endblock contents %}

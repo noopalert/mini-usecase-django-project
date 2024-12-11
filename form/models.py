@@ -1,0 +1,1 @@
+from .modelsDailyTrans import DailyTrans

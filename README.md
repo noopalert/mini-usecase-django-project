@@ -1,0 +1,1 @@
+# mini-usecase-django-project
